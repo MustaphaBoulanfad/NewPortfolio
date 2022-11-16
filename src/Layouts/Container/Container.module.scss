@@ -1,0 +1,30 @@
+@import "../../Helpers/mixins";
+
+.container {
+  margin: 0 auto;
+  height: 100%;
+  @include mediaQuery("mobile") {
+    width: 90%;
+  }
+  @include mediaQuery("small") {
+    width: 90%;
+  }
+}
+
+.container.small {
+  @include mediaQuery("meduim") {
+    width: 700px;
+  }
+  @include mediaQuery("large") {
+    width: 1000px;
+  }
+}
+
+.container {
+  @include mediaQuery("meduim") {
+    width: 800px;
+  }
+  @include mediaQuery("large") {
+    width: 1100px;
+  }
+}

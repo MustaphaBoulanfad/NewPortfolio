@@ -1,0 +1,109 @@
+@import "../../Helpers/variables";
+@import "../../Helpers/mixins";
+$counter: 1;
+.navContainer {
+  background-color: #ececec;
+  width: 90%;
+  height: 100%;
+  padding: 25px;
+  position: absolute;
+  top: 0;
+  left: -90%;
+  transition: left $movementTransition;
+  svg {
+    font-size: 50px;
+    background-color: #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color $hoverTransition;
+    &:hover {
+      background-color: #ccc;
+    }
+    @include mediaQuery("meduim") {
+      display: none;
+    }
+  }
+  nav {
+    user-select: none;
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    li {
+      width: 100%;
+      padding: 10px 0;
+      font-weight: 400;
+      font-size: 19px;
+      cursor: pointer;
+    }
+  }
+  .copyRight {
+    cursor: default;
+    padding: 10px 0;
+    font-weight: 300;
+    font-size: 16px;
+    p::selection {
+      background: $mainColor;
+    }
+  }
+  &.show {
+    left: 0;
+  }
+  @include mediaQuery("small") {
+    width: 60%;
+    left: -60%;
+  }
+  @include mediaQuery("meduim") {
+    background-color: unset;
+    width: 100%;
+    height: fit-content;
+    padding: 15px 0;
+    position: unset;
+    top: unset;
+    left: unset;
+    svg {
+      display: none;
+    }
+    nav {
+      user-select: none;
+      margin-bottom: 0;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      li {
+        padding: 10px;
+        counter-increment: headerCounter;
+        font-size: 20px;
+        width: unset;
+        color: #fff;
+        transition: opacity $hoverTransition;
+        position: relative;
+        opacity: 1;
+        &::before {
+          content: counter(headerCounter) ".";
+          counter-increment: li;
+          content: counter(headerCounter, decimal-leading-zero);
+          position: absolute;
+          top: 0;
+          right: 10px;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+      &:hover li:not(:hover) {
+        opacity: 0.5;
+      }
+      @include mediaQuery(large) {
+        justify-content: center;
+      }
+    }
+    .copyRight {
+      display: none;
+    }
+  }
+}
