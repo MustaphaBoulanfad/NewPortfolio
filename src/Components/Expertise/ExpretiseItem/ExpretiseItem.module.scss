@@ -1,0 +1,66 @@
+@import "../../../Helpers/variables";
+@import "../../../Helpers/mixins";
+.item {
+  width: 100%;
+  border: 2px solid #fff;
+  padding: 50px 30px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  h2 {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      font-size: 70px;
+      margin-right: 15px;
+    }
+    @include mediaQuery(small) {
+      font-size: 30px;
+      svg {
+        font-size: 70px;
+      }
+    }
+    @include mediaQuery(meduim) {
+      font-size: 25px;
+      svg {
+        font-size: 60px;
+      }
+    }
+  }
+  p {
+    color: #fff;
+    margin-left: 30px;
+    line-height: 1.5;
+    padding-left: 10px;
+    border-left: 2px solid #47b5ff5b;
+    position: relative;
+    &::before {
+      content: "<h3>";
+      color: $secondColor;
+      opacity: 0.5;
+      font-size: 14px;
+      position: absolute;
+      top: -25px;
+      left: -18px;
+    }
+    &::after {
+      content: "</h3>";
+      color: $secondColor;
+      opacity: 0.5;
+      font-size: 14px;
+      position: absolute;
+      bottom: -25px;
+      left: -18px;
+    }
+  }
+  @include mediaQuery(meduim) {
+    height: 300px;
+  }
+}

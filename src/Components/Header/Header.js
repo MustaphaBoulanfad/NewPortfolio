@@ -7,13 +7,23 @@ import Navbar from "../Navbar/Navbar";
 import { BiMenu, BiDownArrowAlt } from "react-icons/bi";
 
 const Header = () => {
-  const showNav = useSelector((state) => state.showNavMobile);
+  const scrollDown = useSelector((state) => state.scrollDown);
   const dispatch = useDispatch();
+
+  const scrollMeduim = () => {
+    if (scrollDown > 500 && window.innerWidth < 840) {
+      return true;
+    }
+    return false;
+  };
+
   return (
     <header>
       <Container>
         <div className={styles.navContainer}>
-          <div className={styles.menu}>
+          <div
+            className={`${styles.menu} ${scrollMeduim() ? styles.fixed : ""}`}
+          >
             <BiMenu onClick={() => dispatch(toggleNavMobile())} />
             <div className={styles.logo}>
               <p>MustaphaBou</p>
@@ -25,7 +35,7 @@ const Header = () => {
           <Navbar />
         </div>
         <div className={styles.headerContainer}>
-          <h1>Mustapha Bou</h1>
+          <h1>Mustapha Boulanfad</h1>
           <p>Software Engineer, Front end Developer.</p>
         </div>
         <div className={styles.scrollIcon}>

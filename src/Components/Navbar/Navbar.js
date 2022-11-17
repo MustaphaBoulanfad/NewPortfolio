@@ -6,9 +6,22 @@ import { BiX } from "react-icons/bi";
 
 const Navbar = () => {
   const showNav = useSelector((state) => state.showNavMobile);
+  const scrollDown = useSelector((state) => state.scrollDown);
   const dispatch = useDispatch();
+
+  const scrollMeduim = () => {
+    if (scrollDown > 500 && window.innerWidth > 840) {
+      return true;
+    }
+    return false;
+  };
+
   return (
-    <div className={`${styles.navContainer} ${showNav ? styles.show : null}`}>
+    <div
+      className={`${styles.navContainer} ${showNav ? styles.show : ""} ${
+        scrollMeduim() ? styles.fixed : ""
+      }`}
+    >
       <BiX onClick={() => dispatch(toggleNavMobile())} />
       <nav>
         <li>//Home</li>

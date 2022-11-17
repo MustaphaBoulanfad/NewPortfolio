@@ -1,0 +1,27 @@
+@import "../../Helpers/variables";
+
+.cursorIn {
+  position: fixed;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid $secondColor;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.cursorOut {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $mainColor;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
