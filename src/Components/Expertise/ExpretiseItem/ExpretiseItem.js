@@ -11,10 +11,13 @@ const ExpretiseItem = () => {
     const icon = element.icon === "react" ? <GrReactjs /> : <SlScreenDesktop />;
     return (
       <div className={styles.item} key={element.id}>
-        <h2>
+        <div>
           {icon}
-          {element.name}
-        </h2>
+          <h2>
+            <span>{element.name}</span>
+            <span className={styles.line}></span>
+          </h2>
+        </div>
         <p>{element.description}</p>
       </div>
     );

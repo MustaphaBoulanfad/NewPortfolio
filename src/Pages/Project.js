@@ -1,13 +1,10 @@
 import React, { Fragment, useEffect } from "react";
-import Header from "../Components/Header/Header";
-import Footer from "../Components/Footer/Footer";
-import Cursor from "../Layouts/Cursor/Cursor";
-import Expertise from "../Components/Expertise/Expertise";
 import { useDispatch } from "react-redux";
+import Cursor from "../Layouts/Cursor/Cursor";
+import ShowProject from "../Components/ShowProject/ShowProject";
 import { changeScroll } from "../Store/PortfolioSlice";
-import Work from "../Components/Work/Work";
 
-const Home = () => {
+const Project = () => {
   const dispatch = useDispatch();
 
   // To Prevent the page get in the old scroll from showProject
@@ -23,12 +20,9 @@ const Home = () => {
   return (
     <Fragment>
       {window.innerWidth > 840 ? <Cursor /> : null}
-      <Header />
-      <Expertise />
-      <Work />
-      <Footer />
+      <ShowProject />
     </Fragment>
   );
 };
 
-export default Home;
+export default Project;

@@ -1,0 +1,249 @@
+@import "../../Helpers/mixins";
+@import "../../Helpers/variables";
+
+.project {
+  background-color: $backGroundColor;
+  position: relative;
+  .navContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    .menu {
+      &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 15px;
+        background-color: #05171f98;
+        backdrop-filter: blur(5px);
+        z-index: 3;
+      }
+      position: absolute;
+      top: 0;
+      left: 15px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: fit-content;
+      padding: 15px 0;
+      svg {
+        font-size: 50px;
+        background-color: rgba(221, 221, 221, 0.15);
+        color: #fff;
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color $hoverTransition, color $hoverTransition;
+        &:hover {
+          background-color: rgba(221, 221, 221, 0.2);
+          color: $secondColor;
+        }
+        @include mediaQuery("meduim") {
+          display: none;
+        }
+      }
+      .logo {
+        cursor: pointer;
+        user-select: none;
+        p {
+          font-size: 24px;
+          font-weight: 500;
+          color: $secondColor;
+          display: inline;
+        }
+        > span {
+          color: #fff;
+          font-size: 30px;
+          > span {
+            color: $therdColor;
+          }
+        }
+        @include mediaQuery(small) {
+          p {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    @include mediaQuery(meduim) {
+      margin-bottom: 0;
+    }
+  }
+
+  .projectContainer {
+    padding: $sectionPadding 0;
+    .header {
+      p.category {
+        color: #fff;
+        font-size: 19px;
+        font-weight: 300;
+      }
+      h1 {
+        font-size: 60px;
+        color: #fff;
+        margin-bottom: 30px;
+      }
+      nav {
+        margin-bottom: 50px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        li {
+          a {
+            color: #fff;
+            transition: color $hoverTransition;
+            &:hover {
+              color: $secondColor;
+            }
+          }
+          svg {
+            margin: 2px 5px 0;
+            font-size: 12px;
+          }
+        }
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 60px;
+        p.description {
+          color: #fff;
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 1.6;
+          flex: 1;
+        }
+        > div {
+          width: 100%;
+          flex: 1;
+          .clientInfo {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            > div {
+              flex: 1;
+              border-top: 1px solid #fff;
+              padding-top: 20px;
+              h4 {
+                font-size: 20px;
+                color: #fff;
+                font-weight: 600;
+                margin-bottom: 5px;
+              }
+              p {
+                font-size: 15px;
+                color: #fff;
+                font-weight: 300;
+              }
+            }
+          }
+          a {
+            display: flex;
+            color: #fff;
+            margin-top: 35px;
+            transition: color $hoverTransition;
+            svg {
+              font-size: 25px;
+            }
+            &:hover {
+              color: $secondColor;
+            }
+          }
+        }
+        @include mediaQuery(meduim) {
+          gap: 60px;
+          flex-direction: row;
+          > div {
+            .clientInfo {
+              justify-content: flex-start;
+              align-items: flex-start;
+              > div {
+                flex: none;
+              }
+            }
+          }
+        }
+      }
+      img {
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
+  }
+  .copyRight {
+    width: 100%;
+    color: #fff;
+    padding-bottom: 30px;
+  }
+  .backLink {
+    position: fixed;
+    top: 100px;
+    left: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    border-radius: 50%;
+    display: none;
+    background-color: #09212a;
+    transition: color $hoverTransition;
+    p {
+      font-size: 17px;
+      position: absolute;
+      right: -120%;
+      opacity: 0;
+      transition: opacity $hoverTransition, right $hoverTransition;
+      top: 30%;
+    }
+    @include mediaQuery(large) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    &:hover {
+      color: $secondColor;
+      & p {
+        opacity: 1;
+        right: -80%;
+      }
+    }
+  }
+  .scrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    color: #000;
+    display: none;
+    background-color: #ccc;
+    transition: color $hoverTransition;
+    @include mediaQuery(large) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    &:hover {
+      color: $secondColor;
+      & p {
+        opacity: 1;
+        right: -80%;
+      }
+    }
+  }
+}

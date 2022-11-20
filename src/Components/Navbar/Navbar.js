@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { toggleNavMobile } from "../../Store/PortfolioSlice";
 import styles from "./Navbar.module.scss";
 import { BiX } from "react-icons/bi";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Navbar = () => {
   const showNav = useSelector((state) => state.showNavMobile);
@@ -24,11 +25,31 @@ const Navbar = () => {
     >
       <BiX onClick={() => dispatch(toggleNavMobile())} />
       <nav>
-        <li>//Home</li>
-        <li>//Expertise</li>
-        <li>//Work</li>
-        <li>//Experience</li>
-        <li>//Contact</li>
+        <li>
+          <Link smooth to="/#header">
+            //Home
+          </Link>
+        </li>
+        <li>
+          <Link smooth to="/#expertise">
+            //Expertise
+          </Link>
+        </li>
+        <li>
+          <Link smooth to="/#work">
+            //Work
+          </Link>
+        </li>
+        <li>
+          <Link smooth to="/#experience">
+            //Experience
+          </Link>
+        </li>
+        <li>
+          <Link smooth to="/#contact">
+            //Contact
+          </Link>
+        </li>
       </nav>
       <div className={styles.copyRight}>
         <p>&copy;,Made with Love by Mustapha Bou.</p>

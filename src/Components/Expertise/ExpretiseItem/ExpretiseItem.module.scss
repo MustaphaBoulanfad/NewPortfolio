@@ -9,28 +9,47 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 20px;
-  h2 {
-    color: #fff;
-    font-weight: 500;
-    margin-bottom: 20px;
+  gap: 40px;
+  div {
     display: flex;
     justify-content: center;
     align-items: center;
     svg {
       font-size: 70px;
       margin-right: 15px;
+      color: #fff;
+      font-weight: 500;
     }
-    @include mediaQuery(small) {
-      font-size: 30px;
-      svg {
-        font-size: 70px;
+    h2 {
+      color: #fff;
+      font-weight: 500;
+      display: flex;
+      position: relative;
+      span {
+        z-index: 2;
       }
-    }
-    @include mediaQuery(meduim) {
-      font-size: 25px;
-      svg {
-        font-size: 60px;
+      span.line {
+        width: 50%;
+        position: absolute;
+        height: 10px;
+        left: 0;
+        top: 20px;
+        background-color: $therdColor;
+        filter: brightness(85%);
+        display: inline-block;
+        z-index: 0;
+      }
+      @include mediaQuery(small) {
+        font-size: 30px;
+        svg {
+          font-size: 70px;
+        }
+      }
+      @include mediaQuery(meduim) {
+        font-size: 25px;
+        svg {
+          font-size: 60px;
+        }
       }
     }
   }

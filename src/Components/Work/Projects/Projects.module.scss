@@ -1,0 +1,108 @@
+@import "../../../Helpers/variables";
+@import "../../../Helpers/mixins";
+
+.projectsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  a {
+    width: 100%;
+    .project {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      .prjImage {
+        width: 100%;
+        overflow: hidden;
+        height: 350px;
+        img {
+          object-fit: fill;
+          width: 100%;
+          height: 100%;
+          transition: transform $hoverTransition;
+        }
+      }
+      .prjInfo {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        color: #fff;
+        background-color: #081f29;
+        h3 {
+          font-size: 25px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+        .categoryHolder {
+          width: 100%;
+          height: 30px;
+          overflow: hidden;
+
+          p {
+            width: fit-content;
+            padding: 5px 0;
+          }
+          p.category {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity $hoverTransition, transform $hoverTransition;
+          }
+          p.showPrj {
+            position: relative;
+            cursor: pointer;
+            transform: translateY(0);
+            transition: opacity $hoverTransition, color $hoverTransition,
+              transform $hoverTransition;
+            opacity: 0;
+            &::after {
+              content: "";
+              position: absolute;
+              right: -35px;
+              top: 50%;
+              width: 30px;
+              height: 2px;
+              background-color: #fff;
+            }
+            &:hover {
+              color: $secondColor;
+            }
+          }
+        }
+      }
+      &:hover .categoryHolder p.category {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      &:hover .categoryHolder p.showPrj {
+        transform: translateY(-100%);
+        opacity: 1;
+      }
+      &:hover .prjImage img {
+        transform: scale(1.03);
+      }
+    }
+  }
+  @include mediaQuery(meduim) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    a {
+      width: calc(50% - 20px);
+      .project {
+        .prjImage {
+          height: 230px;
+        }
+      }
+    }
+  }
+  @include mediaQuery(large) {
+    a {
+      width: calc(33% - 20px);
+    }
+  }
+}
