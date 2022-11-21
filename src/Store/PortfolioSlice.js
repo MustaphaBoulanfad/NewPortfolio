@@ -93,6 +93,23 @@ const initialState = {
       images: ["https://iili.io/HHoK6k7.png"],
     },
   ],
+  experiences: [
+    {
+      id: 1,
+      post: "Intern Web Developper",
+      description:
+        "Developing the front of a web application for the management of a company invoices with html, Css and Javascript.",
+      company: "WebKeck",
+      date: {
+        from: 2019,
+        to: 2020,
+      },
+      location: "Marrakech, Morocco",
+      website: "https://webkech.com/",
+      logo: "https://iili.io/HJWpBat.jpg",
+      technologies: ["Html", "Css", "Javascript"],
+    },
+  ],
 };
 const portfolioSlice = createSlice({
   name: "portfolio",

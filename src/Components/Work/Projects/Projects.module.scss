@@ -17,7 +17,7 @@
       .prjImage {
         width: 100%;
         overflow: hidden;
-        height: 350px;
+        height: 250px;
         img {
           object-fit: fill;
           width: 100%;
@@ -84,6 +84,15 @@
       }
       &:hover .prjImage img {
         transform: scale(1.03);
+      }
+    }
+  }
+  @include mediaQuery(small) {
+    a {
+      .project {
+        .prjImage {
+          height: 300px;
+        }
       }
     }
   }

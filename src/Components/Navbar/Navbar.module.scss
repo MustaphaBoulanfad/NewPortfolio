@@ -35,7 +35,8 @@ $counter: 1;
     justify-content: flex-start;
     align-items: flex-start;
     li a {
-      color: #fff;
+      display: block;
+      color: #000;
       width: 100%;
       padding: 10px 0;
       font-weight: 400;
@@ -75,7 +76,9 @@ $counter: 1;
         align-items: center;
         width: 100%;
         li {
-          color: $secondColor;
+          a {
+            color: $secondColor;
+          }
         }
       }
     }
@@ -97,16 +100,18 @@ $counter: 1;
       align-items: center;
       width: 100%;
       li {
-        padding: 10px;
+        padding: 5px 10px;
         counter-increment: headerCounter;
         font-size: 20px;
         width: unset;
-        color: #fff;
         transition: opacity $hoverTransition;
         position: relative;
         opacity: 1;
+        a {
+          color: #fff;
+        }
         &::before {
-          content: counter(headerCounter) ".";
+          color: $secondColor;
           counter-increment: li;
           content: counter(headerCounter, decimal-leading-zero);
           position: absolute;

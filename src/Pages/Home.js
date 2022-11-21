@@ -6,6 +6,7 @@ import Expertise from "../Components/Expertise/Expertise";
 import { useDispatch } from "react-redux";
 import { changeScroll } from "../Store/PortfolioSlice";
 import Work from "../Components/Work/Work";
+import Experience from "../Components/Experience/Experience";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ const Home = () => {
       <Header />
       <Expertise />
       <Work />
+      <Experience />
       <Footer />
     </Fragment>
   );
