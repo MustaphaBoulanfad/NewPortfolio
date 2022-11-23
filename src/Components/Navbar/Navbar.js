@@ -26,7 +26,7 @@ const Navbar = () => {
       <BiX onClick={() => dispatch(toggleNavMobile())} />
       <nav>
         <li>
-          <Link smooth to="/#header">
+          <Link smooth to="/#">
             //Home
           </Link>
         </li>

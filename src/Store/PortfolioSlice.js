@@ -9,14 +9,14 @@ const initialState = {
       icon: "software",
       name: "Software Development",
       description:
-        "Experienced in both functional and OOP: Dart, Python, Java, JavaScript, TypeScript.",
+        "Experienced in both functional and OOP: JavaScript, TypeScript.",
     },
     {
       id: 2,
       icon: "react",
       name: "Frontend Dev ReactJS",
       description:
-        "Passionate about UI/UX. Over 4 years of development experience in HTML, CSS, JS, ReactJS framework.",
+        "Passionate about UI/UX. Over 3 years of development experience in HTML, CSS, JS, ReactJS framework.",
     },
   ],
   projects: [
@@ -29,7 +29,7 @@ const initialState = {
       category: "Web Development",
       client: "My self",
       technologies: ["Html", "Sass", "ReactJS"],
-      link: "",
+      link: "https://mustaphaboulanfad.github.io/Gabooo-template/",
       images: ["https://iili.io/HHFR3Sp.png"],
     },
     {
@@ -41,7 +41,7 @@ const initialState = {
       category: "Web Development",
       client: "My self",
       technologies: ["Html", "Sass", "Javascript"],
-      link: "",
+      link: "https://mustaphaboulanfad.github.io/Ashion-Template/",
       images: ["https://iili.io/HH9PqqG.png"],
     },
     {
@@ -53,7 +53,7 @@ const initialState = {
       category: "Web Development",
       client: "My self",
       technologies: ["Html", "Css", "Javascript"],
-      link: "",
+      link: "https://mustaphaboulanfad.github.io/LAGABIA/home.html",
       images: ["https://iili.io/HHFuC7I.png"],
     },
     {
@@ -65,7 +65,7 @@ const initialState = {
       category: "Web Development",
       client: "My self",
       technologies: ["Html", "Css"],
-      link: "",
+      link: "https://mustaphaboulanfad.github.io/Sparkle-template/",
       images: ["https://iili.io/HHFAdy7.png"],
     },
     {
@@ -77,7 +77,7 @@ const initialState = {
       category: "Web Development",
       client: "My self",
       technologies: ["Html", "Css"],
-      link: "",
+      link: "https://mustaphaboulanfad.github.io/Doob-template/",
       images: ["https://iili.io/HHFT5R1.png"],
     },
     {
@@ -89,7 +89,7 @@ const initialState = {
       category: "Web Development",
       client: "My self",
       technologies: ["Html", "Css", "Javascript"],
-      link: "",
+      link: "https://mustaphaboulanfad.github.io/Portfolio/index.html#home",
       images: ["https://iili.io/HHoK6k7.png"],
     },
   ],

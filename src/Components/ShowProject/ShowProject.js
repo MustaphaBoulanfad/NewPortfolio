@@ -76,7 +76,7 @@ const ShowProject = () => {
                     <p>{project.technologies.join(", ")}</p>
                   </div>
                 </div>
-                <a href={`${project.link}`}>
+                <a href={`${project.link}`} target="_blank" rel="noreferrer">
                   Open Project <BsArrowRightShort />
                 </a>
               </div>
