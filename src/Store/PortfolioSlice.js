@@ -22,6 +22,18 @@ const initialState = {
   projects: [
     {
       id: 1,
+      name: "Dento",
+      description:
+        "Dento is a dental care website template, a near-complete solution to get your clinic online as fast as possible. Dento contains 7 diferent pages for services, pricing, contact, and also a blogs page and a page to read the blog.",
+      headerImage: "https://iili.io/Hxlp0cx.png",
+      category: "Web Development",
+      client: "My self",
+      technologies: ["Html", "Sass", "ReactJS"],
+      link: "https://mustaphaboulanfad.github.io/Dento/",
+      images: ["https://iili.io/Hx0IjWu.png"],
+    },
+    {
+      id: 2,
       name: "Gabooo",
       description:
         "Gabooo is a Template for fashion stores and other eCommerce websites. This clean, straightforward layout puts the site's content in the focus of attention.",
@@ -33,7 +45,7 @@ const initialState = {
       images: ["https://iili.io/HHFR3Sp.png"],
     },
     {
-      id: 2,
+      id: 3,
       name: "Ashion",
       description:
         "Ashion is a Template for fashion stores and other eCommerce websites. This clean, straightforward layout puts the site's content in the focus of attention.",
@@ -45,7 +57,7 @@ const initialState = {
       images: ["https://iili.io/HH9PqqG.png"],
     },
     {
-      id: 3,
+      id: 4,
       name: "LAGABIA",
       description:
         "LAGABIA is a full restaurant website with 11 pages (Home, Menu, Gallery, Shop, Contact...), give users the possibility to discover the restaurant and get crave just with drilling in the pages",
@@ -57,7 +69,7 @@ const initialState = {
       images: ["https://iili.io/HHFuC7I.png"],
     },
     {
-      id: 4,
+      id: 5,
       name: "Sparkle",
       description:
         "Sparkle is a template for single page agency style, modern and clean, with a simple design that puts the site's content in the focus of attention.",
@@ -69,7 +81,7 @@ const initialState = {
       images: ["https://iili.io/HHFAdy7.png"],
     },
     {
-      id: 5,
+      id: 6,
       name: "Doob",
       description:
         "Doob is a template for single page agency style, modern and clean, with a simple design that puts the site's content in the focus of attention.",
@@ -81,7 +93,7 @@ const initialState = {
       images: ["https://iili.io/HHFT5R1.png"],
     },
     {
-      id: 6,
+      id: 7,
       name: "My Old Portfolio",
       description:
         "Modern and colorfull portfolio, with animation and compatible with all devices.",
