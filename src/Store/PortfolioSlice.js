@@ -30,7 +30,7 @@ const initialState = {
       client: "My self",
       technologies: ["Html", "Sass", "ReactJS"],
       link: "https://mustaphaboulanfad.github.io/Dento/",
-      images: ["https://iili.io/Hx0IjWu.png"],
+      images: ["https://iili.io/Hx00riB.png"],
     },
     {
       id: 2,
