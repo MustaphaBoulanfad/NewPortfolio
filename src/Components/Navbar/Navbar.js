@@ -27,27 +27,27 @@ const Navbar = () => {
       <nav>
         <li>
           <Link smooth to="/#">
-            //Home
+            &#47;&#47;Home
           </Link>
         </li>
         <li>
           <Link smooth to="/#expertise">
-            //Expertise
+            &#47;&#47;Expertise
           </Link>
         </li>
         <li>
           <Link smooth to="/#work">
-            //Work
+            &#47;&#47;Work
           </Link>
         </li>
         <li>
           <Link smooth to="/#experience">
-            //Experience
+            &#47;&#47;Experience
           </Link>
         </li>
         <li>
           <Link smooth to="/#contact">
-            //Contact
+            &#47;&#47;Contact
           </Link>
         </li>
       </nav>

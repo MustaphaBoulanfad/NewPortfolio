@@ -7,7 +7,13 @@ header {
   background-image: url("../../Assets/headerback.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
+  .overlay {
+    @include overlay($backGroundColor, 0.7, 1);
+    position: absolute;
+  }
   .navContainer {
+    z-index: 4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +26,7 @@ header {
         padding: 10px 15px;
         background-color: #05171f98;
         backdrop-filter: blur(5px);
-        z-index: 3;
+        z-index: 5;
       }
       position: absolute;
       top: 0;
@@ -30,6 +36,7 @@ header {
       align-items: center;
       width: fit-content;
       padding: 15px 0;
+      z-index: 5;
       svg {
         font-size: 50px;
         background-color: rgba(221, 221, 221, 0.15);
@@ -73,6 +80,8 @@ header {
   }
 
   .headerContainer {
+    z-index: 4;
+    position: relative;
     width: 100%;
     height: 80%;
     display: flex;
@@ -112,6 +121,11 @@ header {
     }
   }
   .scrollIcon {
+    z-index: 4;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     border: 2px solid #fff;
     color: #fff;
     width: 30px;

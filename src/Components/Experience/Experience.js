@@ -83,7 +83,7 @@ const Experience = () => {
         <h1>Professional Experiences</h1>
         <div className={styles.experienceContainer}>
           <div className={styles.hiring}>
-            <p>//Open To Work! </p>
+            <p>&#47;&#47;Open To Work! </p>
           </div>
           {experiences}
         </div>
