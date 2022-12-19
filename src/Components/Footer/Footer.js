@@ -20,7 +20,9 @@ const Footer = () => {
               <span></span>
             </h2>
             <p>
-              <a href="">Messenger</a>
+              <a href="https://www.messenger.com/t/100026045948128/">
+                Messenger
+              </a>
               <a href="https://www.linkedin.com/in/mustapha-boulanfad/">
                 LinkedIn
               </a>
