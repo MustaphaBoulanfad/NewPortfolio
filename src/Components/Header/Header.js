@@ -5,6 +5,7 @@ import styles from "./Header.module.scss";
 import Container from "../../Layouts/Container/Container";
 import Navbar from "../Navbar/Navbar";
 import { BiMenu, BiDownArrowAlt } from "react-icons/bi";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Header = () => {
   const scrollDown = useSelector((state) => state.scrollDown);
@@ -39,9 +40,9 @@ const Header = () => {
           <h1>Mustapha Boulanfad</h1>
           <p>Software Engineer, Front end Developer.</p>
         </div>
-        <div className={styles.scrollIcon}>
+        <Link smooth to="/#expertise" className={styles.scrollIcon}>
           <BiDownArrowAlt />
-        </div>
+        </Link>
       </Container>
     </header>
   );
